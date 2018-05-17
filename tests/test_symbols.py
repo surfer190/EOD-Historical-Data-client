@@ -1,6 +1,7 @@
 import unittest
 import vcr
 
+from eodclient.errors import InvalidExchangeCodeError
 from eodclient.exchange import Exchange
 
 
@@ -21,3 +22,15 @@ class ExchangeTests(unittest.TestCase):
             list(response[0].keys()),
             self.SYMBOL_KEYS
         )
+
+    def test_init_without_exchange_code(self):
+        '''Ensure a no code exception is raised when initialising without
+        a share code'''
+        with self.assertRaises(TypeError):
+            exchange_instance = Exchange()
+
+    def test_init_bad_code(self):
+        '''Ensure initialisng an exchange with a code that does not
+        exist fails'''
+        with self.assertRaises(InvalidExchangeCodeError):
+            exchange_instance = Exchange('XXYP')

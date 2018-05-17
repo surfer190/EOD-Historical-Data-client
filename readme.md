@@ -6,6 +6,9 @@
 
 ## Run the tests
 
-    python -m unittest tests/test_symbols.py
+    EOD_API_KEY='your-key-here' python -m unittest tests/test_symbols.py
 
+## Structure
 
+Exchange - name, code
+Symbol - Code, Country, Currency, Exchange, Name
