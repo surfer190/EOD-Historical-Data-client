@@ -8,6 +8,8 @@ name = "pypi"
 [packages]
 
 requests = "*"
+nose = "*"
+vcrpy = "*"
 
 
 [dev-packages]

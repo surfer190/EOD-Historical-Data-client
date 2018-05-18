@@ -1,16 +1,25 @@
 # EOD-Historical-Data-client
 
-### Get exchange Symbols
-
-`https://eodhistoricaldata.com/api/exchanges/{EXCHANGE_CODE}?api_token={YOUR_API_KEY}`
+A client for interacting with [https://eodhistoricaldata.com/](https://eodhistoricaldata.com/)
 
 ## Run the tests
 
-    EOD_API_KEY='your-key-here' python -m unittest tests/test_symbols.py
+    EOD_API_KEY='your-key-here' nosetests
 
 Sometimes it is easier to add your key to the environment
 
 ## Structure
 
-Exchange - name, code
-Symbol - Code, Country, Currency, Exchange, Name
+* Exchange - name, code
+* Symbol - Code, Country, Currency, Exchange, Name
+
+## Getting Started
+
+    pip install eodclient
+
+## Usage
+
+    from eodclient import exchange
+
+    us_exchange = exchange.Exchange('US')
+    us_exchange.get_symbols()

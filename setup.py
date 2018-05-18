@@ -14,4 +14,6 @@ setup(
     license='GPLv3',
     install_requires=['requests>=2,<3'],
     python_requires='>=3.6',
+    test_suite='nose.collector',
+    tests_require=['nose'],
 )
