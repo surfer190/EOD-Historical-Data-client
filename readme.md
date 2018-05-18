@@ -8,6 +8,8 @@
 
     EOD_API_KEY='your-key-here' python -m unittest tests/test_symbols.py
 
+Sometimes it is easier to add your key to the environment
+
 ## Structure
 
 Exchange - name, code

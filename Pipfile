@@ -8,8 +8,8 @@ name = "pypi"
 [packages]
 
 requests = "*"
-vcrpy = "*"
 
 
 [dev-packages]
 
+vcrpy = "*"
