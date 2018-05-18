@@ -12,7 +12,7 @@ class APIKeyMissingError(Exception):
 
 if EOD_API_KEY is None:
     raise APIKeyMissingError(
-        "All methods require an API key from "
+        "All methods require an EOD_API_KEY env variable from "
         "https://eodhistoricaldata.com/"
     )
 session = requests.Session()
