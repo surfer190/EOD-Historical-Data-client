@@ -1,0 +1,24 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json
+  response:
+    body: {string: '{"code":"AAPL.US","timestamp":1527271826,"gmtoffset":0,"open":188.27,"high":189.65,"low":187.65,"close":188.83,"volume":11648929,"previousClose":188.15,"change":0.68}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 25 May 2018 18:11:16 GMT']
+      Server: [nginx/1.10.3 (Ubuntu)]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-RateLimit-Limit: ['360']
+      X-RateLimit-Remaining: ['358']
+    status: {code: 200, message: OK}
+version: 1

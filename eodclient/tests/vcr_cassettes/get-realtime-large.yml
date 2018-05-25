@@ -1,0 +1,68 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=US.ABT%2CUS.ACCO%2CUS.AEF%2CUS.PLKT%2CLSE.BBY%2CLSE.BGS%2CLSE.BLV%2CLSE.CASH%2CLSE.CLP%2CTO.BB%2CV.ATI%2CBE.AMT%2CHM.COK%2CXETRA.BAS
+  response:
+    body: {string: '[{"code":"AAPL.US","timestamp":1527271826,"gmtoffset":0,"open":188.27,"high":189.65,"low":187.65,"close":188.83,"volume":11648929,"previousClose":188.15,"change":0.68},{"code":"US.ABT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"US.ACCO","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"US.AEF","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"US.PLKT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.BBY","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.BGS","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.BLV","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.CASH","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.CLP","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"TO.BB","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"V.ATI","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"BE.AMT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"HM.COK","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"XETRA.BAS","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 25 May 2018 18:11:18 GMT']
+      Server: [nginx/1.10.3 (Ubuntu)]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-RateLimit-Limit: ['360']
+      X-RateLimit-Remaining: ['357']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://eodhistoricaldata.com/api/real-time/ALE.DU?fmt=json&s=MU.CCL%2CSTU.CVA%2CF.8BI%2CVI.PAL%2CMI.BO%2CPA.ATO%2CBR.FP%2CMC.LLN%2CAS.KA%2CVX.ROG%2CLS.GPA%2CSW.GE%2CST.CE%2COL.SPU
+  response:
+    body: {string: '[{"code":"ALE.DU","timestamp":1527260776,"gmtoffset":0,"open":20.34,"high":20.48,"low":20.3,"close":20.46,"volume":220,"previousClose":20.21,"change":0.25},{"code":"MU.CCL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"STU.CVA","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"F.8BI","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"VI.PAL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"MI.BO","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"PA.ATO","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"BR.FP","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"MC.LLN","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"AS.KA","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"VX.ROG","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LS.GPA","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"SW.GE","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"ST.CE","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"OL.SPU","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 25 May 2018 18:11:18 GMT']
+      Server: [nginx/1.10.3 (Ubuntu)]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-RateLimit-Limit: ['360']
+      X-RateLimit-Remaining: ['356']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://eodhistoricaldata.com/api/real-time/DANT.CO?fmt=json&s=HE.AM1%2CJSE.WHL
+  response:
+    body: {string: '[{"code":"DANT.CO","timestamp":1527252880,"gmtoffset":0,"open":300,"high":300,"low":300,"close":300,"volume":160,"previousClose":296,"change":4},{"code":"HE.AM1","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"JSE.WHL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 25 May 2018 18:11:19 GMT']
+      Server: [nginx/1.10.3 (Ubuntu)]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-RateLimit-Limit: ['360']
+      X-RateLimit-Remaining: ['355']
+    status: {code: 200, message: OK}
+version: 1

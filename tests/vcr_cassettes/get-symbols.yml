@@ -77,7 +77,6 @@ interactions:
         Coal Corp","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"BVT","Name":"The
         Bidvest Group Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"BWN","Name":"Balwin
         Properties Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"CAT","Name":"Caxton
-        and CTP Publishers and Printers Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"CATP","Name":"Caxton
         and CTP Publishers and Printers Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"CCO","Name":"Capital
         &amp; Counties Properties PLC","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"CFR","Name":"Compagnie
         Financi\u00e8re Richemont SA","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"CGN","Name":"Cognition
@@ -211,7 +210,8 @@ interactions:
         Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KAL","Name":"Kaap
         Agri Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KAP","Name":"KAP
         Industrial Holdings Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KBO","Name":"Kibo
-        Mining Plc","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KDV","Name":"KayDav
+        Mining Plc","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KCCGLD","Name":"Fr
+        Krugerrand Custodial Certificate","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KDV","Name":"KayDav
         Group Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KIO","Name":"Kumba
         Iron Ore Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"KST","Name":"PSG
         Konsult Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"L4L","Name":"Long4life
@@ -361,7 +361,8 @@ interactions:
         Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SPG","Name":"Super
         Group Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SPP","Name":"The
         SPAR Group Ltd","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SRE","Name":"Sirius
-        Real Estate Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SSK","Name":"Stefanutti
+        Real Estate Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SRR","Name":"Steinhoff
+        Africa Retail Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SSK","Name":"Stefanutti
         Stocks Holdings Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"SSS","Name":"Stor-Age
         Property REIT Limited","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"STAN40","Name":"Stanlib
         Top 40 Fund","Country":"South Africa","Exchange":"JSE","Currency":"ZAR"},{"Code":"STANSX","Name":"Stanlib
@@ -428,11 +429,11 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Date: ['Fri, 18 May 2018 13:26:04 GMT']
+      Date: ['Fri, 25 May 2018 17:55:46 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['359']
+      X-RateLimit-Remaining: ['356']
     status: {code: 200, message: OK}
 version: 1
