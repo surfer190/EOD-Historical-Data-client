@@ -7,14 +7,14 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=US.PLKT%2CJSE.WHL
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=PLKT.US%2CWHL.JSE
   response:
-    body: {string: '[{"code":"AAPL.US","timestamp":1527271826,"gmtoffset":0,"open":188.27,"high":189.65,"low":187.65,"close":188.83,"volume":11644133,"previousClose":188.15,"change":0.68},{"code":"US.PLKT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"JSE.WHL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    body: {string: '[{"code":"AAPL.US","timestamp":1527278400,"gmtoffset":0,"open":188.27,"high":"NA","low":"NA","close":188.58,"volume":17226115,"previousClose":188.15,"change":0.43},{"code":"PLKT.US","timestamp":1525369867,"gmtoffset":0,"open":0,"high":0,"low":0,"close":0.018,"volume":0,"previousClose":0.018,"change":0},{"code":"WHL.JSE","timestamp":1527260764,"gmtoffset":0,"open":5850,"high":6115,"low":5850,"close":6090,"volume":3130907,"previousClose":60.9,"change":6029.1}]'}
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Date: ['Fri, 25 May 2018 18:11:13 GMT']
+      Date: ['Sat, 26 May 2018 08:54:50 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]

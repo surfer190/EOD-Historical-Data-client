@@ -9,12 +9,12 @@ interactions:
     method: GET
     uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json
   response:
-    body: {string: '{"code":"AAPL.US","timestamp":1527271826,"gmtoffset":0,"open":188.27,"high":189.65,"low":187.65,"close":188.83,"volume":11648929,"previousClose":188.15,"change":0.68}'}
+    body: {string: '{"code":"AAPL.US","timestamp":1527278400,"gmtoffset":0,"open":188.27,"high":"NA","low":"NA","close":188.58,"volume":17226115,"previousClose":188.15,"change":0.43}'}
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Date: ['Fri, 25 May 2018 18:11:16 GMT']
+      Date: ['Sat, 26 May 2018 08:54:52 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
