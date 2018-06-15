@@ -10,7 +10,7 @@ class ExchangeTests(unittest.TestCase):
 
     SYMBOL_KEYS = ['Code', 'Name', 'Country', 'Exchange', 'Currency']
 
-    @vcr.use_cassette('tests/vcr_cassettes/get-symbols.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-symbols.yml', filter_query_parameters=['api_token'])
     def test_get_symbols(self):
         '''Ensure symbols are returned in correct format from the exchange'''
         exchange_instance = Exchange('JSE')

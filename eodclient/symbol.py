@@ -27,7 +27,7 @@ class SymbolSet(object):
             raise ValueError("must be initialised with a list of dicts")
         index = 0
         self.symbols = []
-        for symbol in symbol_list:
+        for index, symbol in enumerate(symbol_list):
             if not isinstance(symbol, dict):
                 raise ValueError(
                     "all items in the list must be dicts "
@@ -35,11 +35,11 @@ class SymbolSet(object):
                     )
             else:
                 self.symbols.append(Symbol(**symbol))
-            index += 1
 
     def get_real_time(self):
         '''Split the data into chunks of 15 shares and make requests
         combine at the end'''
+        import ipdb; ipdb.set_trace()
         results = []
         for chunk in chunks(self.symbols, 15):
             first = chunk[0]

@@ -118,3 +118,22 @@ class DataTests(unittest.TestCase):
                     {'code': 'WHL'},
                 ]
             )
+
+    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-unknown.yml', filter_query_parameters=['api_token'])
+    def test_unknown_codes(self):
+        '''Ensure a symbol list splits queries if more than 15'''
+        symbol_set_instance = SymbolSet(
+            [
+                {'code': 'AAPL', 'exchange_code': 'BBL'},
+                {'code': 'E4RNH', 'exchange_code': 'US'},
+                {'code': 'ZBLN1', 'exchange_code': 'US'},
+            ]
+        )
+        response = symbol_set_instance.get_real_time()
+
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], dict)
+        self.assertEqual(
+            len(response),
+            3
+        )

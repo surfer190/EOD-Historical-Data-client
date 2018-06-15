@@ -60,3 +60,7 @@ Sometimes it is easier to add your key to the environment
 3. Distribute and update pypi
 
     python setup.py sdist upload
+
+## Run a specific test
+
+    nosetests eodclient/tests/test_data.py:DataTests.test_unknown_codes -s

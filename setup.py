@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name = 'eodclient',
     packages = ['eodclient'],
-    version = '1.0.5.dev1',
+    version = '1.0.6.dev1',
     description = 'A python client for interacting with the EOD Historical Data api',
     author = 'surfer190',
     author_email = 'shutch190@gmail.com',
