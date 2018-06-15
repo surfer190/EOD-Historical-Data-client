@@ -39,7 +39,6 @@ class SymbolSet(object):
     def get_real_time(self):
         '''Split the data into chunks of 15 shares and make requests
         combine at the end'''
-        import ipdb; ipdb.set_trace()
         results = []
         for chunk in chunks(self.symbols, 15):
             first = chunk[0]
