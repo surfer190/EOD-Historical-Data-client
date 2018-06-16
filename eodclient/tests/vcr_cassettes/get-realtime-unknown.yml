@@ -7,23 +7,23 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/AAPL.BBL?fmt=json&s=US.E4RNH%2CUS.ZBLN1
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.BBL?fmt=json&s=E4RNH.US%2CZBLN1.US
   response:
     body:
       string: !!binary |
         H4sIAAAAAAAAA4uuVkrOT0lVslJydAzw0XNy8lHSUSrJzE0tLknMLQAK+zkCBdJzS/LT0opTS2AC
-        +QWpeTB2RmZ6Boydk18OYybn5BeDzAUbUJafU5oL5xUUpZZl5pcWOyMrSc5IzEuHKqnVgTsrNFjP
-        1STIz2PwOSvKycfPcFA4KxYAKsrTuMYBAAA=
+        +QWpeTB2RmZ6Boydk18OYybn5BeDzAUbUJafU5oL5xUUpZZl5pcWOyMrSc5IzEuHKqnVgTvL1STI
+        z0MvNHiQOSvKycfPcLA4KxYAR6X7SMYBAAA=
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Thu, 14 Jun 2018 12:29:06 GMT']
+      Date: ['Sat, 16 Jun 2018 14:39:14 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['359']
+      X-RateLimit-Remaining: ['353']
     status: {code: 200, message: OK}
 version: 1

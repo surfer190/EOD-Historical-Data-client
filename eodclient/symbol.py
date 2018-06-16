@@ -45,7 +45,7 @@ class SymbolSet(object):
             path = 'https://eodhistoricaldata.com/api/real-time/' \
                 f'{ first.code }.{ first.exchange_code }'
             the_rest_string = ','.join(
-                [f'{s.exchange_code}.{s.code}' for s in chunk[1:]]
+                [f'{s.code}.{s.exchange_code}' for s in chunk[1:]]
             )
             response = session.get(
                 path,

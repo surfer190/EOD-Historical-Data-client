@@ -103,6 +103,28 @@ class DataTests(unittest.TestCase):
             33
         )
 
+    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-multiple.yml', filter_query_parameters=['api_token'])
+    def test_correct_code_queried(self):
+        '''Ensure the correct code is queried'''
+        ss = SymbolSet([
+            {'code': 'SGL', 'exchange_code': 'JSE'},
+            {'code': 'CML', 'exchange_code': 'JSE'},
+            {'code': 'AAPL', 'exchange_code': 'US'}
+        ])
+        response = ss.get_real_time()
+        self.assertEqual(
+            response[0]['code'],
+            'SGL.JSE'
+        )
+        self.assertEqual(
+            response[1]['code'],
+            'CML.JSE'
+        )
+        self.assertEqual(
+            response[2]['code'],
+            'AAPL.US'
+        )
+
     def test_init_without_list(self):
         '''Ensure a list of dicts is required'''
         with self.assertRaises(TypeError):

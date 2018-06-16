@@ -7,18 +7,25 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=US.PLKT%2CJSE.WHL
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=PLKT.US%2CWHL.JSE
   response:
-    body: {string: '[{"code":"AAPL.US","timestamp":1527271826,"gmtoffset":0,"open":188.27,"high":189.65,"low":187.65,"close":188.83,"volume":11644133,"previousClose":188.15,"change":0.68},{"code":"US.PLKT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"JSE.WHL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA3WQy0rDQBSG3+Wsx2EuOXPJroggmkWhigtxUdppEkg6waR1IX13z9gkFG1355tz
+        4Zv//Rs2cRsgh8ViWfDXFTAY6jb0w7rtIJeovPDKCcGgbIe42/VhgJwodmFPfS+4RAZVXVYjGQZN
+        /CJwjiuCTRN7up/QZQyOsTm0xOiVRZ3RS/cZjnU89PfjIJ10tFat9yXN3UnuzYnNmsvi+eWaptNe
+        K3ND81LyXP8qUqntbDjSJGgNtf64CS7Sbyc32lDqwu3tseBPq4crEdrsZoRozBwgGu/H+BAxpXDO
+        BDHJTGYeM2G1+meHyNPYZIcoJdf69PEDexSzY+QBAAA=
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
+      Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Fri, 25 May 2018 18:11:13 GMT']
+      Date: ['Sat, 16 Jun 2018 14:39:07 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['359']
+      X-RateLimit-Remaining: ['358']
     status: {code: 200, message: OK}
 version: 1

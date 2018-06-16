@@ -7,36 +7,29 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=US.ABT%2CUS.ACCO%2CUS.AEF%2CUS.PLKT%2CLSE.BBY%2CLSE.BGS%2CLSE.BLV%2CLSE.CASH%2CLSE.CLP%2CTO.BB%2CV.ATI%2CBE.AMT%2CHM.COK%2CXETRA.BAS
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=ABT.US%2CACCO.US%2CAEF.US%2CPLKT.US%2CBBY.LSE%2CBGS.LSE%2CBLV.LSE%2CCASH.LSE%2CCLP.LSE%2CBB.TO%2CATI.V%2CAMT.BE%2CCOK.HM%2CBAS.XETRA
   response:
-    body: {string: '[{"code":"AAPL.US","timestamp":1527271826,"gmtoffset":0,"open":188.27,"high":189.65,"low":187.65,"close":188.83,"volume":11648929,"previousClose":188.15,"change":0.68},{"code":"US.ABT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"US.ACCO","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"US.AEF","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"US.PLKT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.BBY","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.BGS","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.BLV","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.CASH","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LSE.CLP","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"TO.BB","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"V.ATI","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"BE.AMT","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"HM.COK","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"XETRA.BAS","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5WWTU/bQBCG/4vPYTT7vcstiWipCAI1KWpV9YBoIJEIRk2gh4r/3tkve+usK5HT
+        TDw7fvLOO3a+/2nu2p/r5rSZTq8X8GXZTJrDdrfeH253z80pU9yh4xZx0jzsDu39/X59aE4pa5/X
+        T3TdITA1aTbbh03K9KR5bH9TYi1wSu4e2z3196mVk+a1fXzZUa4cN0pI+ub51/p1277s56mQWlo6
+        trl9eqC6EwZOv016zNnq3ZSaU48MqQUg9Q+MdKFA9GWsJ2RMCOvwmDC16wgRUJWE8/nVuxGZKHUU
+        ILKK9H2voQDe82nkCikf6heKMhyWYGcfalzWcaRPfcAWdKccxSZhWVB+RnFisSYPVnJhLJ0ZYMWi
+        Gtb14qI6Uiuc4HqEq7RdjMNAKRTEmMBSlsmMxx9g0ey8fzsuYJwXks1m32CxPKsshTaGj7AJRD+n
+        uBMCaX6BjTsF/lZRNO4d2ZEpiYy6DeBSowx3IuEfto/LMTZtx9g4dtsawkjmbZS5UAYnZjSGWhpy
+        4wCNhyNpRzmdKEVb3FTBrHNIVqsbje6TJWPowEmVdQtXEh1D4zXMcIKLY7RUk1UrN2A+XZ7X0Swz
+        chRNASe3p2dcTIJujOLebZRJWsmCTtOpgW5dURVvcV2lc6itsGPCQaEcoCGACAcoSNIsHGVE0wnH
+        uHHegUO82CDDndB6CFOOdgarq8o2/O8VocCRSEk9HRTL6tni2aaBuR5QGu00q+jnf1KyHa23K9im
+        q09wU2GzRo4/RfyrIKLRT6U4kFHoZUzSxQtZOeeYOt7UWNOBlVSXK5jVHiCS27GRKgaKXjuRKyUB
+        LMUJLGWZzFtxMM5cnwUruOZXF3B+WZFLcidHrOZoRhkrxoEqhgkqJpnJdxowpeoK0my6hK9nq8/T
+        CpXRemw96Y+FN0pUy//LIB0ClzVgeoP5jMzTkXGG1pLjBnjUAP1OJz7aAMHefvwF8VOmRicJAAA=
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
+      Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Fri, 25 May 2018 18:11:18 GMT']
-      Server: [nginx/1.10.3 (Ubuntu)]
-      X-Content-Type-Options: [nosniff]
-      X-Frame-Options: [SAMEORIGIN]
-      X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['357']
-    status: {code: 200, message: OK}
-- request:
-    body: null
-    headers:
-      Accept: ['*/*']
-      Accept-Encoding: ['gzip, deflate']
-      Connection: [keep-alive]
-      User-Agent: [python-requests/2.18.4]
-    method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/ALE.DU?fmt=json&s=MU.CCL%2CSTU.CVA%2CF.8BI%2CVI.PAL%2CMI.BO%2CPA.ATO%2CBR.FP%2CMC.LLN%2CAS.KA%2CVX.ROG%2CLS.GPA%2CSW.GE%2CST.CE%2COL.SPU
-  response:
-    body: {string: '[{"code":"ALE.DU","timestamp":1527260776,"gmtoffset":0,"open":20.34,"high":20.48,"low":20.3,"close":20.46,"volume":220,"previousClose":20.21,"change":0.25},{"code":"MU.CCL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"STU.CVA","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"F.8BI","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"VI.PAL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"MI.BO","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"PA.ATO","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"BR.FP","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"MC.LLN","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"AS.KA","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"VX.ROG","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"LS.GPA","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"SW.GE","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"ST.CE","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"OL.SPU","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
-    headers:
-      Cache-Control: ['no-cache, private']
-      Connection: [keep-alive]
-      Content-Type: [application/json]
-      Date: ['Fri, 25 May 2018 18:11:18 GMT']
+      Date: ['Sat, 16 Jun 2018 14:39:11 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
@@ -51,18 +44,63 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/DANT.CO?fmt=json&s=HE.AM1%2CJSE.WHL
+    uri: https://eodhistoricaldata.com/api/real-time/ALE.DU?fmt=json&s=CCL.MU%2CCVA.STU%2C8BI.F%2CPAL.VI%2CBO.MI%2CATO.PA%2CFP.BR%2CLLN.MC%2CKA.AS%2CROG.VX%2CGPA.LS%2CGE.SW%2CCE.ST%2CSPU.OL
   response:
-    body: {string: '[{"code":"DANT.CO","timestamp":1527252880,"gmtoffset":0,"open":300,"high":300,"low":300,"close":300,"volume":160,"previousClose":296,"change":4},{"code":"HE.AM1","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"},{"code":"JSE.WHL","timestamp":"NA","gmtoffset":"NA","open":"NA","high":"NA","low":"NA","close":"NA","volume":"NA","previousClose":"NA","change":"NA"}]'}
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA32WW0/bQBCF/4ufndFe7N01byYFhGqaiASoVPUB0XCRCEZNoA8V/71nb87iS99m
+        vOPNt2fOrPPjb3bX/tpkR1ndnNCXqyzP9k/bzW5/u33NjngpCiU1EyzPHrb79v5+t9lnR8ja180L
+        1iviJs8enx4eu+S5/dPFd8/tDnuHsvf2+W2LVNjtXn9v3p/at93clwhOSuTZ3ePtywNKZoKK4iPv
+        4Obzhi6GcBUrRMEm4EpSOrL52KH5MJD5JILx0u7VIwv1AYylUNc1rdZjVEYbM0GlqcQ5vWKaVJFn
+        jkqTkDi+F0OTLPMsUgk2QuVLolwplTk+p9NBG61S5RSTIqEik48dkw8Dk08iE2cMhD2lQv2IUsu6
+        oevzAZQxXKtiQigpqIpQUpLA7zkqPLfqBCxkOtFKlRIy9rjwNk+sxfB+0sXjBV2MoEml+BQao7Jz
+        FmJgOjKE6kDmF6JgQ19hHaPTdZAYT6Dq9YKW9UCwimlVTfmdC0n298M0IsP+DowLRtWBjAtMVyKa
+        EUpIGLEnm93Pqh4RZ4xMgni6pOPLz4QzqabgcH7PhcCL1bUQT6ZVKkO3473g8oSiab7RxfwzBm4t
+        Iw2mBjuP3VoQoxtBH4f22cfBVzgr2hq5OMdKTx5fEcVJJ/BrTfVqgPTf3lVkus752CFVpEERkPD8
+        QKSlXekhocJeIlErRkwmUl0uzuj6+xhXAbXGpRJcOA/43tkMxndognM63Fg2S+dQGFXwCrw9wvhW
+        vCPgw4TwbFlTM1TOcFZMG8tZOXjLxaGZ1uFdM1O74z4dcDH3ZlQubebZCa1uBqIZLWQ1+VWUVqUw
+        hi52SNyFAckn0V/WrAMmlCQXBKYvvSDmwFoPsYwuINV4LxmpCp6JUrkkaKX0oZW2DJdBRONawB4D
+        OEaa9bzGqqSVq+UVLZoBIIaAsSnAEh/ByOdjh1eWTgf/afRJhBPK/TXpmQzv4gCxmTP8s/j4+Q+N
+        n0U/6AgAAA==
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
+      Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Fri, 25 May 2018 18:11:19 GMT']
+      Date: ['Sat, 16 Jun 2018 14:39:11 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
       X-RateLimit-Remaining: ['355']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://eodhistoricaldata.com/api/real-time/DANT.CO?fmt=json&s=AM1.HE%2CWHL.JSE
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA3XQPW+DMBAG4P9ys2v5bM7YbFFaKYr6MbRSh6pDlDiABDEKJB2q/PdeKdBKNNt7
+        6Gwev2+fsI27ABncLh5f5PIJBHRlHdpuUzeQIWnnUFulBOR1F/f7NnSQ8RSbcOhDUeYFZNo7AVX8
+        4OQ4bavY8qV9PsfqVPNgVCqgOYZzGU/tcljwCS8Xm0POCzf2IibO4gHl6m6m8Sq1lFzRoJWGf/4j
+        GobehHYi8WfF04hCTDzOWMPZCaak0X9sr6t7uX7+F5e4a1WRtTTayHo/1EVEv30RWe5otHl+aGr0
+        TEckv9dGHRGiNOby/gX+J5+EzAEAAA==
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Type: [application/json]
+      Date: ['Sat, 16 Jun 2018 14:39:12 GMT']
+      Server: [nginx/1.10.3 (Ubuntu)]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-RateLimit-Limit: ['360']
+      X-RateLimit-Remaining: ['354']
     status: {code: 200, message: OK}
 version: 1

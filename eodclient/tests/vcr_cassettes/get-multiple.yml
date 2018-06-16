@@ -7,23 +7,25 @@ interactions:
       Connection: [keep-alive]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json
+    uri: https://eodhistoricaldata.com/api/real-time/SGL.JSE?fmt=json&s=CML.JSE%2CAAPL.US
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAy3MQQ7CIBAF0LvMGglgqdBd49aFifEATaVAUjqk0Low3t0x6fLN/P8/MOLLQQd9
-        f7/x5wMY1JhcqUPK0EmtrLDKCMHAp4rTVFyFjoTZLfS3gkvNIEQfDrUMZnwTjOGKMM5YaP9P0zDY
-        cd4SWVt10eeGLnl1e8StXI8gTRqqhWHxlDtJbtvvD6b/81amAAAA
+        H4sIAAAAAAAAA3WQwWrDMBBE/2XPqpBkrbTyLYRQKCkUTE+lh5A6tsGOTO2kh5J/7yqJmxJcnWaG
+        3eVp3r5hGz9KyKF4XMunYgUCxqYrh3HT9ZBrNEF51EoJqLox7nZDOULOLvblHnJymYC6qWqWgdM2
+        frGyWsC2jQOfJcfpMbaHjo0OOnPKk4D+szw28TAsr1PS8Ua92VdpBbW0J/ELtnyeByPrFb95MKRg
+        JjKncELjmOWVDYPBGxznd1QYZBqYuJAcSo9/yBaLl7V8LWYqC4b+I9NBSc1nL62dHX/+XJwmkiY1
+        cWklWbI3Qub1mFlO7kDTES51An3QMrjT+w+K89Wr2wEAAA==
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Sat, 16 Jun 2018 14:39:09 GMT']
+      Date: ['Sat, 16 Jun 2018 14:39:06 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['357']
+      X-RateLimit-Remaining: ['359']
     status: {code: 200, message: OK}
 version: 1
