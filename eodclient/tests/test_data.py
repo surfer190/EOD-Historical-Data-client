@@ -103,6 +103,38 @@ class DataTests(unittest.TestCase):
             33
         )
 
+    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-15.yml', filter_query_parameters=['api_token'])
+    def test_16_codes(self):
+        '''Ensure a symbol list splits queries for 16'''
+        symbol_set_instance = SymbolSet(
+            [
+                {'code': 'AAPL', 'exchange_code': 'US'},
+                {'code': 'ABT', 'exchange_code': 'US'},
+                {'code': 'ACCO', 'exchange_code': 'US'},
+                {'code': 'AEF', 'exchange_code': 'US'},
+                {'code': 'PLKT', 'exchange_code': 'US'},
+                {'code': 'BBY', 'exchange_code': 'LSE'},
+                {'code': 'BGS', 'exchange_code': 'LSE'},
+                {'code': 'BLV', 'exchange_code': 'LSE'},
+                {'code': 'CASH', 'exchange_code': 'LSE'},
+                {'code': 'CLP', 'exchange_code': 'LSE'},
+                {'code': 'BB', 'exchange_code': 'TO'},
+                {'code': 'ATI', 'exchange_code': 'V'},
+                {'code': 'AMT', 'exchange_code': 'BE'},
+                {'code': 'COK', 'exchange_code': 'HM'},
+                {'code': 'BAS', 'exchange_code': 'XETRA'},
+                {'code': 'ALE', 'exchange_code': 'DU'},
+            ]
+        )
+        response = symbol_set_instance.get_real_time()
+
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], dict)
+        self.assertEqual(
+            len(response),
+            16
+        )
+
     @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-multiple.yml', filter_query_parameters=['api_token'])
     def test_correct_code_queried(self):
         '''Ensure the correct code is queried'''
@@ -143,7 +175,6 @@ class DataTests(unittest.TestCase):
 
     @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-unknown.yml', filter_query_parameters=['api_token'])
     def test_unknown_codes(self):
-        '''Ensure a symbol list splits queries if more than 15'''
         symbol_set_instance = SymbolSet(
             [
                 {'code': 'AAPL', 'exchange_code': 'BBL'},

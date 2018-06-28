@@ -1,0 +1,41 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=ABT.US%2CACCO.US%2CAEF.US%2CPLKT.US%2CBBY.LSE%2CBGS.LSE%2CBLV.LSE%2CCASH.LSE%2CCLP.LSE%2CBB.TO%2CATI.V%2CAMT.BE%2CCOK.HM%2CBAS.XETRA%2CALE.DU
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA5WWW0/bMBTHv0uesyPfL7wlXTcmikBrQZumPSBWChKlaC3sYeK775zYTtxcJvHm
+        v+04v/zPxfnxt7jd/VoXJ0VVXS7galmUxeFhu94fbrbPxQnXkgluGGNlsdkednd3+/WhOEG1e14/
+        4bqT4FVZ3D9s7kkZELwsHnd/wpIri9vH3R6P506DxqXX3ePLlrSVgilry+L59/r1Yfeyn6WNCrjB
+        5+5vnja0EaR+KzvKevVuSMNAi8RoOCjEahBxQdGrwptxReBKIlRcayX8AJAewtnEx8D6nG82u3g3
+        IJdgdAJE4QSqYCKukEguSrAWZcdoucVg9D3EbTkhs0cWzj9NEGo+FWc8LoQYB8E6hGyxTCMSlPHO
+        kMU9KAOZax8YMJfZdrk4G4ur8F4qaSaSD89ouXCMxzdoYTo6FuYTmqLM6nEx4LIzi8BUBlbX32Gx
+        nA+rgnupp9wSjkMbT4ElkmpCWAudbVElOCwzLfnQODwg49OQ+1Z/Xk7iKTXhG/ctHPfJtWYypZl3
+        wLHsu0SzmgsE71mHzwABp1oQ2AtEbt7ieoxOeGO5d1N0zAPleGwpUYVqiCJhRpkMFHaMkVmKRYco
+        8lqYVcvTUUTnuFVT8eW66RSRMIgAiGOqvNjKNChG1ZsApRlGF88KmxIhywycLS5H6dBAqcSEgQwc
+        vibA4TgFOEy3ZUHziYt7wy017l586ZHMOywNlptX17C6GFbGf+8LTOVomwSGItgmwFCOR9sojTo4
+        oZhzCpd7cBy3kdfxnqDClZl11eoLXA/huBd4m41fZtQr2sSLInUUWmi9a7Yl8zBL8LweHDaVY7Qj
+        46rzFdSDniI8U8JNlYXGltJetFE0cHEc4aJKcJSNPbS0P/p2lG4XZ3B63jet4fJTzcQb+tQQ0zBu
+        qMIwQgWRmOikHlPcPYJUV0v4Nl99rfpUkmHvwhIdDyU1YEzwgOUEKLSu4XIMqElEMFR08SYywbRw
+        dNv08PA0+lNpU41jd8xTbTGHj1d9QKGMtGyqSLlvOmeshSAawLgQAaNqAem4Hpzg+IuQwdHHvv38
+        B80nWLzYCQAA
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Type: [application/json]
+      Date: ['Thu, 28 Jun 2018 22:41:39 GMT']
+      Server: [nginx/1.10.3 (Ubuntu)]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN]
+      X-RateLimit-Limit: ['360']
+      X-RateLimit-Remaining: ['359']
+    status: {code: 200, message: OK}
+version: 1

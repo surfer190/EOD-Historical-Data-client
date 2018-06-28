@@ -37,10 +37,10 @@ class SymbolSet(object):
                 self.symbols.append(Symbol(**symbol))
 
     def get_real_time(self):
-        '''Split the data into chunks of 15 shares and make requests
+        '''Split the data into chunks of 20 shares and make requests
         combine at the end'''
         results = []
-        for chunk in chunks(self.symbols, 15):
+        for chunk in chunks(self.symbols, 20):
             first = chunk[0]
             path = 'https://eodhistoricaldata.com/api/real-time/' \
                 f'{ first.code }.{ first.exchange_code }'
@@ -55,6 +55,8 @@ class SymbolSet(object):
                 }
             )
             result = response.json()
+            if isinstance(result, dict):
+                result = [result]
             results = results + result
         return results
 
