@@ -10,9 +10,11 @@ name = "pypi"
 requests = "*"
 nose = "*"
 vcrpy = "*"
+"pep8" = "*"
 
 
 [dev-packages]
 
 vcrpy = "*"
 ipdb = "*"
+freezegun = "*"

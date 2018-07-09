@@ -35,6 +35,13 @@ Sometimes it is easier to add your key to the environment
     apple_symbol = Symbol(code='AAPL', exchange_code='US')
     apple_data = apple_symbol.get_real_time()
 
+# Get End of day daya for a single symbol
+
+    from eodclient.symbol import Symbol
+
+    apple_symbol = Symbol(code='AAPL', exchange_code='US')
+    apple_data = apple_symbol.get_end_of_day()
+
 ## Get Real time data for multiple stocks
 
     from eodclient.symbol import SymbolSet

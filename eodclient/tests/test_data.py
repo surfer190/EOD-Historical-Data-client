@@ -1,5 +1,7 @@
 import unittest
+
 import vcr
+from freezegun import freeze_time
 
 from eodclient.symbol import Symbol, SymbolSet
 
@@ -10,8 +12,14 @@ class DataTests(unittest.TestCase):
     REALTIME_KEYS = [
         'code', 'timestamp', 'gmtoffset', 'open', 'high', 'low',
         'close', 'volume', 'previousClose', 'change']
+    EOD_KEYS = [
+        'date', 'open', 'high', 'low', 'close',
+        'adjusted_close', 'volume', ]
 
-    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-single-realtime.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-single-realtime.yml',
+        filter_query_parameters=['api_token']
+    )
     def test_get_single_symbol(self):
         '''Test get a single symbol live data'''
         symbol_instance = Symbol(code='AAPL', exchange_code='US')
@@ -21,6 +29,45 @@ class DataTests(unittest.TestCase):
         self.assertEqual(
             list(response.keys()),
             self.REALTIME_KEYS
+        )
+
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-single-eod.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_get_eod_symbol(self):
+        '''Test get a single symbol end of day data'''
+        symbol_instance = Symbol(code='AAPL', exchange_code='US')
+        response = symbol_instance.get_end_of_day()
+
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], dict)
+        self.assertEqual(
+            list(response[0].keys()),
+            self.EOD_KEYS
+        )
+
+    @freeze_time('2018-07-03')
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-single-eod-from.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_get_eod_symbol_year(self):
+        '''Test get a single symbol end of day data
+        Only get a year and 5 months
+        '''
+        symbol_instance = Symbol(code='AAPL', exchange_code='US')
+        response = symbol_instance.get_end_of_day(days=1)
+
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], dict)
+        self.assertEqual(
+            list(response[0].keys()),
+            self.EOD_KEYS
+        )
+        self.assertEqual(
+            response[0]['date'],
+            '2018-07-02'
         )
 
     def test_init_without_params(self):
@@ -35,7 +82,10 @@ class DataTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             symbol_instance = Symbol()
 
-    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-small.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-realtime-small.yml',
+        filter_query_parameters=['api_token']
+    )
     def test_get_many_symbols(self):
         '''Test getting multiple symbol data'''
         symbol_set_instance = SymbolSet(
@@ -54,7 +104,10 @@ class DataTests(unittest.TestCase):
             self.REALTIME_KEYS
         )
 
-    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-large.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-realtime-large.yml',
+        filter_query_parameters=['api_token']
+    )
     def test_more_than_15_split(self):
         '''Ensure a symbol list splits queries if more than 15'''
         symbol_set_instance = SymbolSet(
@@ -103,7 +156,10 @@ class DataTests(unittest.TestCase):
             33
         )
 
-    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-15.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-realtime-15.yml',
+        filter_query_parameters=['api_token']
+    )
     def test_16_codes(self):
         '''Ensure a symbol list splits queries for 16'''
         symbol_set_instance = SymbolSet(
@@ -135,15 +191,18 @@ class DataTests(unittest.TestCase):
             16
         )
 
-    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-multiple.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-multiple.yml',
+        filter_query_parameters=['api_token']
+    )
     def test_correct_code_queried(self):
         '''Ensure the correct code is queried'''
-        ss = SymbolSet([
+        symbolset = SymbolSet([
             {'code': 'SGL', 'exchange_code': 'JSE'},
             {'code': 'CML', 'exchange_code': 'JSE'},
             {'code': 'AAPL', 'exchange_code': 'US'}
         ])
-        response = ss.get_real_time()
+        response = symbolset.get_real_time()
         self.assertEqual(
             response[0]['code'],
             'SGL.JSE'
@@ -173,7 +232,10 @@ class DataTests(unittest.TestCase):
                 ]
             )
 
-    @vcr.use_cassette('eodclient/tests/vcr_cassettes/get-realtime-unknown.yml', filter_query_parameters=['api_token'])
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-realtime-unknown.yml',
+        filter_query_parameters=['api_token']
+    )
     def test_unknown_codes(self):
         symbol_set_instance = SymbolSet(
             [

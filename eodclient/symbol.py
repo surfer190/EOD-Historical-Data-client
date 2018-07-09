@@ -1,3 +1,5 @@
+import datetime
+
 from . import session
 
 
@@ -15,6 +17,31 @@ class Symbol(object):
         response = session.get(
             path,
             params={'fmt': 'json'}
+        )
+        return response.json()
+
+    def get_from_date(self, timediff):
+        '''Change a timedelta into a date
+        Return None if less than a day'''
+        one_day = datetime.timedelta(days=1)
+        if timediff >= one_day:
+            return (datetime.date.today() - timediff).strftime('%Y-%m-%d')
+        return None
+
+    def get_end_of_day(self, **kwargs):
+        '''Get end of day data for a symbol'''
+        params = {'fmt': 'json'}
+
+        timedelta = datetime.timedelta(**kwargs)
+        from_date = self.get_from_date(timedelta)
+        if from_date:
+            params['from'] = from_date
+
+        path = 'https://eodhistoricaldata.com/api/eod/' \
+               f'{ self.code }.{ self.exchange_code }'
+        response = session.get(
+            path,
+            params=params
         )
         return response.json()
 
@@ -61,7 +88,7 @@ class SymbolSet(object):
         return results
 
 
-def chunks(list_, n):
+def chunks(list_, number):
     '''Split the list into chunks of n'''
-    for i in range(0, len(list_), n):
-        yield list_[i:i+n]
+    for i in range(0, len(list_), number):
+        yield list_[i:i+number]
