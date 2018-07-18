@@ -3,7 +3,9 @@ import unittest
 
 import vcr
 
-from eodclient.errors import InvalidExchangeCodeError
+from eodclient.errors import (
+    InvalidExchangeCodeError
+)
 from eodclient.exchange import Exchange
 from eodclient.symbol import Symbol
 

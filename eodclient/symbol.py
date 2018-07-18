@@ -4,7 +4,8 @@ from . import session
 from .errors import (
     IncorrectDateFormatError,
     SymbolDictRequiredError,
-    SymbolListRequiredError
+    SymbolListRequiredError,
+    SymbolNotFoundError
 )
 
 __all__ = ['Symbol', 'SymbolSet']
@@ -51,6 +52,8 @@ class Symbol(object):
             path,
             params=params
         )
+        if response.status_code == 404:
+            raise SymbolNotFoundError()
         return response.json()
 
 

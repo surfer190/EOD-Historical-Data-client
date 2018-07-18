@@ -3,7 +3,10 @@ import unittest
 import vcr
 
 from eodclient import *
-from eodclient.errors import IncorrectDateFormatError
+from eodclient.errors import (
+    IncorrectDateFormatError,
+    SymbolNotFoundError
+)
 
 
 class DataTests(unittest.TestCase):
@@ -73,7 +76,7 @@ class DataTests(unittest.TestCase):
         'eodclient/tests/vcr_cassettes/get-single-eod-from-tfg.yml',
         filter_query_parameters=['api_token']
     )
-    def test_get_eod_symbol_year(self):
+    def test_get_eod_symbol_tfg(self):
         '''Test get a single symbol end of day data
         Since 2018-02-04
         '''
@@ -90,6 +93,18 @@ class DataTests(unittest.TestCase):
             response[0]['date'],
             '2018-02-05'
         )
+
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-single-eod-404.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_symbol_not_found_eod(self):
+        '''Test get a single symbol end of day data
+        with no json (decodeError)
+        '''
+        symbol_instance = Symbol(code='J055', exchange_code='JSE')
+        with self.assertRaises(SymbolNotFoundError):
+            response = symbol_instance.get_end_of_day(from_date='2018-02-04')
 
     @vcr.use_cassette(
         'eodclient/tests/vcr_cassettes/get-single-eod-bad-from.yml',

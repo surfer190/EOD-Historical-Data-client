@@ -15,6 +15,10 @@ class SymbolListRequiredError(Error):
     '''A symbol list is required'''
 
 
+class SymbolNotFoundError(Error):
+    '''No Symbol Data'''
+
+
 class SymbolDictRequiredError(Error):
     '''A symbol dict is required'''
 
