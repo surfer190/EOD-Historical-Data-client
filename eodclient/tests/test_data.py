@@ -1,9 +1,9 @@
 import unittest
 
 import vcr
-from freezegun import freeze_time
 
-from eodclient.symbol import Symbol, SymbolSet
+from eodclient import *
+from eodclient.errors import IncorrectDateFormatError
 
 
 class DataTests(unittest.TestCase):
@@ -47,17 +47,16 @@ class DataTests(unittest.TestCase):
             self.EOD_KEYS
         )
 
-    @freeze_time('2018-07-03')
     @vcr.use_cassette(
         'eodclient/tests/vcr_cassettes/get-single-eod-from.yml',
         filter_query_parameters=['api_token']
     )
     def test_get_eod_symbol_year(self):
         '''Test get a single symbol end of day data
-        Only get a year and 5 months
+        Since 2016-01-01
         '''
         symbol_instance = Symbol(code='AAPL', exchange_code='US')
-        response = symbol_instance.get_end_of_day(days=1)
+        response = symbol_instance.get_end_of_day(from_date='2016-01-01')
 
         self.assertIsInstance(response, list)
         self.assertIsInstance(response[0], dict)
@@ -67,8 +66,41 @@ class DataTests(unittest.TestCase):
         )
         self.assertEqual(
             response[0]['date'],
-            '2018-07-02'
+            '2016-01-04'
         )
+
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-single-eod-from-tfg.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_get_eod_symbol_year(self):
+        '''Test get a single symbol end of day data
+        Since 2018-02-04
+        '''
+        symbol_instance = Symbol(code='TFG', exchange_code='JSE')
+        response = symbol_instance.get_end_of_day(from_date='2018-02-04')
+
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], dict)
+        self.assertEqual(
+            list(response[0].keys()),
+            self.EOD_KEYS
+        )
+        self.assertEqual(
+            response[0]['date'],
+            '2018-02-05'
+        )
+
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-single-eod-bad-from.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_get_eod_bad_from(self):
+        '''Test get a single symbol with a bad from
+        '''
+        symbol_instance = Symbol(code='AAPL', exchange_code='US')
+        with self.assertRaises(IncorrectDateFormatError):
+            response = symbol_instance.get_end_of_day(from_date='01-01-2016')
 
     def test_init_without_params(self):
         '''Ensure a no code exception is raised when initialising without

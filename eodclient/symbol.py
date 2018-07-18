@@ -1,6 +1,13 @@
 import datetime
 
 from . import session
+from .errors import (
+    IncorrectDateFormatError,
+    SymbolDictRequiredError,
+    SymbolListRequiredError
+)
+
+__all__ = ['Symbol', 'SymbolSet']
 
 
 class Symbol(object):
@@ -20,22 +27,23 @@ class Symbol(object):
         )
         return response.json()
 
-    def get_from_date(self, timediff):
-        '''Change a timedelta into a date
-        Return None if less than a day'''
-        one_day = datetime.timedelta(days=1)
-        if timediff >= one_day:
-            return (datetime.date.today() - timediff).strftime('%Y-%m-%d')
-        return None
+    @staticmethod
+    def get_date(date):
+        '''Convert a string date to a datetime'''
+        try:
+            date_object = datetime.datetime.strptime(date, '%Y-%m-%d')
+        except ValueError:
+            raise IncorrectDateFormatError('Date must be in format %Y-%m-%d')
+        else:
+            return date_object
 
-    def get_end_of_day(self, **kwargs):
+    def get_end_of_day(self, *, from_date=None, **kwargs):
         '''Get end of day data for a symbol'''
         params = {'fmt': 'json'}
 
-        timedelta = datetime.timedelta(**kwargs)
-        from_date = self.get_from_date(timedelta)
         if from_date:
-            params['from'] = from_date
+            date_object = self.get_date(from_date)
+            params['from'] = date_object.strftime('%Y-%m-%d')
 
         path = 'https://eodhistoricaldata.com/api/eod/' \
                f'{ self.code }.{ self.exchange_code }'
@@ -51,14 +59,13 @@ class SymbolSet(object):
     def __init__(self, symbol_list):
         '''Ensure the symbol list isa list of dicts'''
         if not isinstance(symbol_list, list):
-            raise ValueError("must be initialised with a list of dicts")
-        index = 0
+            raise SymbolListRequiredError("must be initialised with a list of dicts")
         self.symbols = []
         for index, symbol in enumerate(symbol_list):
             if not isinstance(symbol, dict):
-                raise ValueError(
+                raise SymbolDictRequiredError(
                     "all items in the list must be dicts "
-                    f"(found at index { index }"
+                    f"(found at index { index })"
                     )
             else:
                 self.symbols.append(Symbol(**symbol))
@@ -91,4 +98,4 @@ class SymbolSet(object):
 def chunks(list_, number):
     '''Split the list into chunks of n'''
     for i in range(0, len(list_), number):
-        yield list_[i:i+number]
+        yield list_[i:i + number]

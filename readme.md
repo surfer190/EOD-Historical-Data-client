@@ -30,21 +30,21 @@ Sometimes it is easier to add your key to the environment
 
 ## Get Real time data for a single symbol
 
-    from eodclient.symbol import Symbol
+    from eodclient import Symbol
 
     apple_symbol = Symbol(code='AAPL', exchange_code='US')
     apple_data = apple_symbol.get_real_time()
 
 # Get End of day daya for a single symbol
 
-    from eodclient.symbol import Symbol
+    from eodclient import Symbol
 
     apple_symbol = Symbol(code='AAPL', exchange_code='US')
     apple_data = apple_symbol.get_end_of_day()
 
 ## Get Real time data for multiple stocks
 
-    from eodclient.symbol import SymbolSet
+    from eodclient import SymbolSet
 
     symbols = SymbolSet(
         [
@@ -71,3 +71,7 @@ Sometimes it is easier to add your key to the environment
 ## Run a specific test
 
     nosetests eodclient/tests/test_data.py:DataTests.test_unknown_codes -s
+
+## TODO
+
+* Multithreaded requests

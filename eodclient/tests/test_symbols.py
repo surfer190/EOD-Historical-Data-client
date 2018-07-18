@@ -2,7 +2,6 @@ import datetime
 import unittest
 
 import vcr
-from freezegun import freeze_time
 
 from eodclient.errors import InvalidExchangeCodeError
 from eodclient.exchange import Exchange
@@ -37,22 +36,35 @@ class ExchangeTests(unittest.TestCase):
             exchange_instance = Exchange()
 
     def test_init_bad_code(self):
-        '''Ensure initialisng an exchange with a code that does not
-        exist fails'''
+        '''Ensure initialisng an exchange with a positional argument fails'''
         with self.assertRaises(InvalidExchangeCodeError):
             exchange_instance = Exchange('XXYP')
+
+    def test_bad_code(self):
+        with self.assertRaises(InvalidExchangeCodeError):
+            Exchange_instance = Exchange(exchange_code='XXYP')
 
 
 class SymbolTests(unittest.TestCase):
     '''Tests for the symbol'''
 
-    @freeze_time('2018-07-03')
-    def test_from_date(self):
-        '''Test the from date of symbol'''
-        symbol_instance = Symbol(code='AAPL', exchange_code='US')
-        timediff = datetime.timedelta(days=378)
-        from_date = symbol_instance.get_from_date(timediff)
+    def test_formatted_date(self):
+        '''Ensure formatted date works'''
+        str_date = '2018-08-20'
+        date_object = Symbol.get_date(str_date)
         self.assertEqual(
-            from_date,
-            '2017-06-20'
+            date_object,
+            datetime.datetime(2018, 8, 20)
         )
+
+    def test_unformatted_date(self):
+        '''Ensure unformatted date fails'''
+        str_date = '20-08-2018'
+        with self.assertRaises(Exception):
+            date_object = Symbol.get_date(str_date)
+
+    def test_int_date(self):
+        '''Ensure int date fails'''
+        str_date = 2018
+        with self.assertRaises(Exception):
+            date_object = Symbol.get_date(str_date)

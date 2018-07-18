@@ -5,25 +5,25 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.18.4]
+      User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAzWMywrCMBBF/2XWw5A0zcPuilsXgvgBpaYPaDrFpHUh/rsJ4vJwzr1v6PnhoYG2
-        vV7ofgOENAcfUxc2aKRWopJGCIEwhsTDEH2CJhNvfs3eKTrVCNM8ToUMVRJh4ddPOYR+4ZjvpdOk
-        szp42UNhqypRW4uwPf0x8x7P/7AmafJu6taxhKT05wt58vAEpQAAAA==
+        H4sIAAAAAAAAAzWMwQ7CIBBE/2XPSFgpCtwarx5MjB/QVEqbQLcRWg/Gf3eN8TZv5mVe0NM9gIe2
+        vZzl7QoC6pRDqV1ewKPR6PReGSUg5krDUEIFz0RLmHl3KI8HAeMUxx9ZAYmenK2TTgvoExW+R6ek
+        aoyAjdKauXBoG4VsL4+wTbSW019E+fX6sZsjeztGZd4f5ajCiacAAAA=
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Thu, 28 Jun 2018 22:41:48 GMT']
+      Date: ['Wed, 18 Jul 2018 16:42:39 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['356']
+      X-RateLimit-Remaining: ['354']
     status: {code: 200, message: OK}
 version: 1

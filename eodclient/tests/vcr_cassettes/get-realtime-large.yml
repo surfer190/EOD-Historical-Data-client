@@ -5,40 +5,41 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.18.4]
+      User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://eodhistoricaldata.com/api/real-time/AAPL.US?fmt=json&s=ABT.US%2CACCO.US%2CAEF.US%2CPLKT.US%2CBBY.LSE%2CBGS.LSE%2CBLV.LSE%2CCASH.LSE%2CCLP.LSE%2CBB.TO%2CATI.V%2CAMT.BE%2CCOK.HM%2CBAS.XETRA%2CALE.DU%2CCCL.MU%2CCVA.STU%2C8BI.F%2CPAL.VI
   response:
     body:
       string: !!binary |
-        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
+        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
+        /gmCHx5jJAwAAA==
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Thu, 28 Jun 2018 22:41:49 GMT']
+      Date: ['Wed, 18 Jul 2018 16:42:42 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['355']
+      X-RateLimit-Remaining: ['353']
     status: {code: 200, message: OK}
 - request:
     body: null
@@ -46,34 +47,34 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.18.4]
+      User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://eodhistoricaldata.com/api/real-time/BO.MI?fmt=json&s=ATO.PA%2CFP.BR%2CLLN.MC%2CKA.AS%2CROG.VX%2CGPA.LS%2CGE.SW%2CCE.ST%2CSPU.OL%2CDANT.CO%2CAM1.HE%2CWHL.JSE
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA32VT3PaMBDFv4vOZkcrWf9yc2iatIXAhLTpTKeHTEqAGYiZQtJDJ9+9K9kSih2X
-        064tr3+89yT/+Mse6l9LdsbOZzD9xAp23OyWh+P9bs/OUAkrtcaSF2y1O9aPj4flkZ1RV++XT1SA
-        MgVbb1brULuCbes/odSqYA/b+kCDaRHdeKm3zzvfFWz/e/myqZ8P43Tf0uL1/dMqrOb4WiSo6nYG
-        86pLJbngHPkAFaIBpPc3XIgWBHWBDFGFpkXzraF7EU7aklvsEdKIE+BI0ISM8OMczm/eAo6kHmIj
-        5FauqNVJpxNHXyQlAEnqqNIo9BnFZHIN0/FbjOCe5fQbcs+JhAO+bt3zZTLPZuYh0p2efX5FBOMZ
-        05cKqkUX6f/WOTApUA6sbpHocpmQqMmQnHvHsGZMYgIuMqyb2SV8+97nQmf0UNAFRSppJShRkUxQ
-        gnw4mij7ZQQa4+SsNpLi1VHMP6/ocuQbIcU1A7ycVzDpCScs8nI4V1DSxLgTfd166cvkpW8iHO2g
-        HhkPUyJX7uXlBSzuupoJR2cD1wPxQuFVajdhqJstGMq4AUMTkaRxssdEY/Lgc8iPhzFh3fawrDUl
-        STWUeu0oP1Gq0LRakVuZWNplVqIRpSSjO1ZyMNw/0x5eIw6cu8zKxfwrzCZdQMnRCWMHADX6DDV8
-        Om5K5Xz+WtWaJqqGNE2S0h00GkMXE5mAMuP6UF3fwnjWBRPWohjOWKQSjpQImtEDiSrUEUpyMq1D
-        JLygCUhnONUU4eqiS+NlcmZoS/qTPOnkz/EWqb0eA6Ygz7yS/sPQ4aInlP8bmYk2g7u7msDnRY9O
-        OG5KOl3fT5nS/gvYmKhOGVMqvKk5LZTSBB0Vc6rkRvbPV6XAL4t0SiGClK8//wFoi+ghuQcAAA==
+        H4sIAAAAAAAAA72VTXPaMBCG/4vO7o4+bYubQ1PSlq8JtOlMp4cMJcAMxEwh6aGT/96V1hLCmFun
+        t10h2Y/f99Xy/Q9b1D+XrMduJjD6yDJ23OyWh+Pjbs96wihhZSk4z9hqd6yfng7LI+thV++Xz1iA
+        ESZj681qHZtt/TvWi219wEc3217r7csOW8ktPmH/a/m6qV8O/bgnz9hi/fi8wi3vOHBt3rIIV80n
+        MK266fIrdEJq4BFPSAM6Yx5PSAUC30avdl2RsYCnhOYGj7UA3S63HBA5iBTwwxRu7s/52NgBJ7rR
+        AklHNSlHtSejsgGjJnBR16IyEgp7gnJ7EtWGwzGM+udU5KnUAgVI2KKnAgSKQWBUk2R+OSjmmwCW
+        8/LSTzoaxUqgPldQzbqYMGdXmKz/SGKi2jNhKaOL2GCAApMyHRbilvKklcuYTLjuJwP4+q0LrCiv
+        XQCpJOgYMak0WOw8nPvJpa+RzP1WYBsAhbZloZC4ZSgeOyGiuWnGBtMKhi3pKBWJkbTwT0OGUVfu
+        S5rL2QrZ4BZmD12ycW6u+Cn8hWsy5mvKmC9Dxs4uZcnRuZZU+JRzO0XiZh+p5l1UhbCqO/kc0A6C
+        wjL4iMOrOM0K7PC6RROtNbq4DL87c9KrlbPZ9AtMhudo/8NFY1O5Wia+r8Zz6E/Oqdyo0LnV1was
+        tFEwX1Lu3WIIvaujWBx1b1noj4Vc8cS+aiTg7vYSx8qisOh6EvjT5NKgccI3scLrFqY9rYdcaWdz
+        gJKC60v/RHOiCTzmP0/YHu6G8GnWCZfza5PCKPceYjMqTgkj/UiiPyIj3R9jQFO54LLAD2ppZpRM
+        Y6/Ktx9/AXIPoefFBwAA
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Thu, 28 Jun 2018 22:41:50 GMT']
+      Date: ['Wed, 18 Jul 2018 16:42:44 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['354']
+      X-RateLimit-Remaining: ['352']
     status: {code: 200, message: OK}
 version: 1

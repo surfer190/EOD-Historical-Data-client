@@ -1,6 +1,8 @@
-from .errors import InvalidExchangeCodeError
+from .errors import InvalidExchangeCodeError, ExchangeCodeRequiredError
 
 from . import session
+
+__all__ = ['Exchange']
 
 EXCHANGE_CODES = [
     {'code': 'US', 'name': 'USA Stocks'},
@@ -64,13 +66,17 @@ EXCHANGE_CODES = [
 
 class Exchange(object):
     '''Exchange object for interacting with the EOD exchange'''
-    def __init__(self, exchange_code):
+    def __init__(self, exchange_code=None):
         '''The exchange code from
         https://eodhistoricaldata.com/knowledgebase/list-supported-exchanges/
         is required'''
+        if exchange_code is None:
+            raise ExchangeCodeRequiredError(
+                message='An exchange code is required to initiatile an exchange'
+            )
         codes = [exchange['code'] for exchange in EXCHANGE_CODES]
         if exchange_code not in codes:
-            codes = ','.join(codes)
+            codes = ', '.join(codes)
             raise InvalidExchangeCodeError(
                 expression=exchange_code,
                 message=f'Ensure exchange code is in: { codes }'

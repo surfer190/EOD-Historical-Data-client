@@ -5,7 +5,7 @@ interactions:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
       Connection: [keep-alive]
-      User-Agent: [python-requests/2.18.4]
+      User-Agent: [python-requests/2.19.1]
     method: GET
     uri: https://eodhistoricaldata.com/api/eod/AAPL.US?fmt=json
   response:
@@ -4725,27 +4725,31 @@ interactions:
         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
-        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
+        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
     headers:
       Cache-Control: ['no-cache, private']
       Connection: [keep-alive]
       Content-Encoding: [gzip]
       Content-Type: [application/json]
-      Date: ['Mon, 09 Jul 2018 14:52:12 GMT']
+      Date: ['Wed, 18 Jul 2018 16:42:31 GMT']
       Server: [nginx/1.10.3 (Ubuntu)]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN]
       X-RateLimit-Limit: ['360']
-      X-RateLimit-Remaining: ['359']
+      X-RateLimit-Remaining: ['357']
     status: {code: 200, message: OK}
 version: 1
