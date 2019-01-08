@@ -14,7 +14,7 @@ class DataTests(unittest.TestCase):
 
     REALTIME_KEYS = [
         'code', 'timestamp', 'gmtoffset', 'open', 'high', 'low',
-        'close', 'volume', 'previousClose', 'change']
+        'close', 'volume', 'previousClose', 'change', 'change_p']
     EOD_KEYS = [
         'date', 'open', 'high', 'low', 'close',
         'adjusted_close', 'volume', ]
@@ -298,4 +298,23 @@ class DataTests(unittest.TestCase):
         self.assertEqual(
             len(response),
             3
+        )
+
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/get-realtime-single.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_single_symbolset(self):
+        '''Test getting a single symbol with a set'''
+        symbol_set_instance = SymbolSet(
+            [
+                {'code': 'AAPL', 'exchange_code': 'US'},
+            ]
+        )
+        response = symbol_set_instance.get_real_time()
+        self.assertIsInstance(response, list)
+        self.assertIsInstance(response[0], dict)
+        self.assertEqual(
+            list(response[0].keys()),
+            self.REALTIME_KEYS
         )

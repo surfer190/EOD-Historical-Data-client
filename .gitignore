@@ -4,3 +4,5 @@ dist/
 *.pyc
 
 .vscode/
+
+vcr_cassettes/
