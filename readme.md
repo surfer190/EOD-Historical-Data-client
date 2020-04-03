@@ -72,6 +72,10 @@ Sometimes it is easier to add your key to the environment
 
     nosetests eodclient/tests/test_data.py:DataTests.test_unknown_codes -s
 
+To allow for debugging
+
+    nosetests -s
+
 ## TODO
 
 * Multithreaded requests

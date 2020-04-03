@@ -1,3 +1,4 @@
+from json.decoder import JSONDecodeError
 from .errors import InvalidExchangeCodeError, ExchangeCodeRequiredError
 
 from . import session
@@ -61,6 +62,20 @@ EXCHANGE_CODES = [
     {'code': 'INDX', 'name': 'Indexes'},
     {'code': 'CC', 'name': 'Cryptocurrencies'},
     {'code': 'TW', 'name': 'Taiwan Exchange'},
+    {'code': 'SN', 'name': 'Chilean Stock Exchange'},
+    {'code': 'BOND', 'name': 'Bond Virtual Exchange'},
+    {'code': 'EUFUND', 'name': 'Europe Fund Virtual Exchange'},
+    {'code': 'RUFUND', 'name': 'Russsia Fund Virtual Exchange'},
+    {'code': 'BA', 'name': 'Buenos Aires Exchange'},
+    {'code': 'BUD', 'name': 'Budapest Stock Exchange'},
+    {'code': 'KQ', 'name': 'KOSDAQ'},
+    {'code': 'IC', 'name': 'Iceland Exchange'},
+    {'code': 'PSE', 'name': 'Philippine Stock Exchange'},
+    {'code': 'WAR', 'name': 'Warsaw Stock Exchange'},
+    {'code': 'AT', 'name': 'Athens Exchange'},
+    {'code': 'TWO', 'name': 'Taiwan OTC Exchange'},
+    {'code': 'VN', 'name': 'Vietnam Stocks'},
+    {'code': 'LU', 'name': 'Luxembourg Stock Exchange'}
 ]
 
 
@@ -90,4 +105,8 @@ class Exchange(object):
             path,
             params={'fmt': 'json'}
         )
-        return response.json()
+        try:
+            return response.json()
+        except JSONDecodeError:
+            return {'message': response.content.decode("utf-8")}
+

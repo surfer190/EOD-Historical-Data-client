@@ -13,7 +13,7 @@ from eodclient.symbol import Symbol
 class ExchangeTests(unittest.TestCase):
     '''Tests for the exchange'''
 
-    SYMBOL_KEYS = ['Code', 'Name', 'Country', 'Exchange', 'Currency']
+    SYMBOL_KEYS = ['Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type']
 
     @vcr.use_cassette(
         'eodclient/tests/vcr_cassettes/get-symbols.yml',
@@ -70,3 +70,18 @@ class SymbolTests(unittest.TestCase):
         str_date = 2018
         with self.assertRaises(Exception):
             date_object = Symbol.get_date(str_date)
+
+    @vcr.use_cassette(
+        'eodclient/tests/vcr_cassettes/ticker-not-found.yml',
+        filter_query_parameters=['api_token']
+    )
+    def test_ticker_not_found(self):
+        '''Ensure ticker not found is handled'''
+        exchange_instance = Exchange('NZ')
+        response = exchange_instance.get_symbols()
+
+        self.assertIsInstance(response, dict)
+        self.assertEqual(
+            response,
+            {'message': 'Ticker Not Found'}
+        )
